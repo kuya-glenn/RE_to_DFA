@@ -10,7 +10,6 @@ import pdf
 ##from PDFViewer import image_view
 import tkinter.font as font
 import os
-import time 
 root = tk.Tk()
 
 
@@ -39,13 +38,6 @@ def click():
     label11.configure(font = Font_tuple)
     label11.grid(row=150, column=300)
     label11.place(x=20, y=310)
-    time.sleep(3)
-    label11.destroy()
-
-
-
-
-   
 
 def click2():
     RE_2_DFA.second_dfa(input2.get())
@@ -63,6 +55,8 @@ def click2():
     label11.grid(row=150, column=300)
     label11.place(x=20, y=310)
     
+
+
 
 
 tabControl =ttk.Notebook(root) 
@@ -109,6 +103,14 @@ button1['font'] = My_Font
 button1.grid(row=800, column=400)
 button1.place(x=650, y=415)
 
+image3 = Image.open("C:/THESIS/1.png")
+test = ImageTk.PhotoImage(image3)
+label3 = tkinter.Label(tab1,image=test)
+label3.image = test
+label3.place( x=280, y=350)
+
+
+
 #Tab2
 
 label2=tk.Label(tab2,text="Problem: ( 11 + 00 ) ( 1 + 0 )* ( 101 + 111 + 01 ) ( 00* + 11* ) ( 1 + 0 + 11 )")
@@ -123,6 +125,12 @@ button2=tk.Button(tab2, text="Simulate", command = click2, width = 10, height = 
             , bg='#4E54B0',fg='#E4E6FF', font = 'Sans-serif')
 button2.grid(row=200, column=500)
 button2.place(x=650, y=415)
+
+image5 = Image.open("C:/THESIS/2.png")
+test = ImageTk.PhotoImage(image5)
+label5 = tkinter.Label(tab2,image=test)
+label5.image = test
+label5.place( x=280, y=350)
 
 
 
